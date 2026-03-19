@@ -1,0 +1,4 @@
+.vscode/
+.bash*
+.profile
+*.exe
