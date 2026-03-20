@@ -5,9 +5,15 @@ void Render()
   glClear(GL_COLOR_BUFFER_BIT);
 
   glLoadIdentity();
+  /*
+  // 3.1
   glTranslatef(0.2f, 0.f, 0.f);
   glRotatef(90.f, 0.f, 0.f, 1.f);
   glScalef(1.5f, 1.5f, 1.5f);
+  */
+
+  // 3.2
+  glRotatef(glutGet(GLUT_ELAPSED_TIME) / 1000.f * 90.f, 0.f, 0.f, 1.f);
 
   glBegin(GL_TRIANGLES);
   
