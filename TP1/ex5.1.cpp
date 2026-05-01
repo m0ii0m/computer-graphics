@@ -1,14 +1,22 @@
 #include <GL/glut.h>
-#include <GL/GLU.h>
+#include <GL/glu.h>
 
 void Render()
 {
   glClearColor(1.f, 1.f, 0.f, 1.f);
   glClear(GL_COLOR_BUFFER_BIT);
 
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+  
+  gluPerspective(45.f, 960.f / 540.f, 0.1f, 1000.f);
+
+  glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
 
-  gluPerspective(45.f, 960.f / 540.f, 0.1f, 1000.f);
+  gluLookAt(0.f, 5.f, 5.f,
+            0.f, 0.f, 0.f,
+            0.f, 1.f, 0.f);
 
   glTranslatef(0.2f, 0.f, -3.f);
   glRotatef(60.f, 0.f, 1.f, 0.f);

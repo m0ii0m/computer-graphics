@@ -1,5 +1,5 @@
 #include <GL/glut.h>
-#include <GL/GLU.h>
+#include <GL/glu.h>
 
 void Render()
 {
@@ -8,11 +8,11 @@ void Render()
 
   glLoadIdentity();
 
-  gluOrtho2D(0.f, 960.f, 0.f, 540.f);
+  gluPerspective(45.f, 960.f / 540.f, 0.1f, 1000.f);
 
-  glTranslatef(480.f, 270.f, 0.f);
-  glRotatef(180.f, 0.f, 0.f, 1.f);
-  glScalef(500.f, 500.f, 500.f);
+  glTranslatef(0.2f, 0.f, -3.f);
+  glRotatef(60.f, 0.f, 1.f, 0.f);
+  glScalef(1.5f, 1.5f, 1.5f);
 
   glBegin(GL_TRIANGLES);
   
