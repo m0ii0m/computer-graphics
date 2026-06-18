@@ -1,9 +1,8 @@
-# Makefile pour le Projet OpenGL final
 CC = g++
 CFLAGS = -Wall -Wextra -std=c++17 -Isrc/common -Isrc
 LDFLAGS = -lGL -lglfw -lGLEW
 
-SRC = src/main.cpp src/common/GLShader.cpp src/common/Math.cpp src/common/GLTexture.cpp src/common/MeshUtils.cpp src/common/OrbitCamera.cpp
+SRC = src/main.cpp src/common/GLShader.cpp src/common/Math.cpp src/common/GLTexture.cpp src/common/MeshUtils.cpp src/common/OrbitCamera.cpp src/common/OBJLoader.cpp src/common/Framebuffer.cpp
 OBJ = $(SRC:.cpp=.o)
 EXEC = ProjetOpenGL.exe
 

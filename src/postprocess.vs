@@ -1,0 +1,10 @@
+#version 330 core
+in vec2 a_position;
+in vec2 a_uv;
+
+out vec2 v_UV;
+
+void main(void) {
+    v_UV = a_uv;
+    gl_Position = vec4(a_position, 0.0, 1.0);
+}

@@ -70,7 +70,7 @@ GLuint LoadCubemap(const char* faces[6]) {
     unsigned char* data = stbi_load(faces[0], &width, &height, &channels, 4);
     if (data) {
         int mipLevels = 1;
-        glTexStorage2D(GL_TEXTURE_CUBE_MAP, mipLevels, GL_RGBA8, width, height);
+        glTexStorage2D(GL_TEXTURE_CUBE_MAP, mipLevels, GL_SRGB8_ALPHA8, width, height);
         glTexSubImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, 0, 0, width, height, GL_RGBA, GL_UNSIGNED_BYTE, data);
         stbi_image_free(data);
     }
